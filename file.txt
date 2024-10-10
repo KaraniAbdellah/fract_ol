@@ -1,0 +1,28 @@
+// Main Info
+Libraries: miniLibX, pthread, math.
+Fractals: Mandelbrot(3), Julia(8), Tricorne(2), burningship(1), monsieur(1). 
+
+
+// Roadmap
+	Step 1: Introduction
+		Read about fractls
+		https://youtu.be/EIX1w3NdFRM?si=j0U4nStZwOH4GpjE
+		https://youtu.be/MKTPGWXfHQI?si=DNTh3vAX6Rqe6Qth
+		https://en.wikipedia.org/wiki/Fractal
+		https://en.wikipedia.org/wiki/Mandelbrot_set
+		https://en.wikipedia.org/wiki/Julia_set
+		https://en.wikipedia.org/wiki/Burning_Ship_fractal
+		https://github.com/Asalek/Fractol
+		
+	Step 2: Setup
+		Install miniLibX, pthread, and math libraries.
+		Read about libraries
+		miniLibX: https://harm-smits.github.io/42docs/libs/minilibx/getting_started.html
+		
+
+	Step 3: ....
+
+
+
+
+
