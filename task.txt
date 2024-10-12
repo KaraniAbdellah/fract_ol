@@ -1,13 +1,11 @@
-// Finich The Task About Pthread
-// Write in paper some concepts about miniLibX & Pthread.
+// Write in paper some concepts about miniLibX & Compling & Pthread.
 // Read docs about miniLibX & pthread
 // create a simple program using miniLibX
 // create a simple program using pthread
 // create a simple program using miniLibX & pthread
 
 
-// Go a head To the projects
 
-
+// make a simple fractls
 
 

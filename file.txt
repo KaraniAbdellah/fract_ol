@@ -15,7 +15,9 @@ Fractals: Mandelbrot(3), Julia(8), Tricorne(2), burningship(1), monsieur(1).
 		https://github.com/Asalek/Fractol
 		😊: https://harm-smits.github.io/42docs/libs/minilibx/getting_started.html
 		😊: https://www.youtube.com/watch?v=1QrpaTrfaxQ
-		
+
+///////////////////////////////////////////////////////////////////////////
+
 	Step 2: Setup
 		Install miniLibX, pthread, and math libraries.
 		Read about libraries
@@ -23,15 +25,20 @@ Fractals: Mandelbrot(3), Julia(8), Tricorne(2), burningship(1), monsieur(1).
 		
 		Info & Installation about miniLibX:
 			MiniLibX: is a simple graphics library for creating basic graphics without
-			needing to know about X-Window or Cocoa. It helps you make windows, 
+			needing to know about X-Window or Cocoa	. It helps you make windows, 
 			draw shapes, handle images, and manage events easily.	
 		
 			X-Window: is a system that helps display graphics on Unix computers.
 			It allows you to run programs that show images and windows.
 			
+			MiniLibX is a library to draw shapes like rectangles and circles. 
+			It uses X-Window (X11) to open a window (like a black screen) where 
+			these shapes are shown. MiniLibX draws, and X-Window displays.
+
 			Installation:
 				MiniLibX requires some libraries to work properly. Install these using the following command:
 				''sudo apt-get update && sudo apt-get install xorg libxext-dev zlib1g-dev libbsd-dev''
+				
 			Download MiniLibX:
 				''git clone https://github.com/42Paris/minilibx-linux.git mlx_linux''
 					clone miniLibX in new folder names mlx_linux
@@ -47,8 +54,7 @@ Fractals: Mandelbrot(3), Julia(8), Tricorne(2), burningship(1), monsieur(1).
 			You don't need to install pthread, It is typically included with the system libraries,
 			and you can use it directly by including pthread.h.
 			
-		
-		
+///////////////////////////////////////////////////////////////////////////
 		
 	Step 3: 
 		program with miniLibX
