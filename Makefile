@@ -10,7 +10,7 @@ LDFLAGS = -Lmlx_linux -lmlx_Linux -lXext -lX11 -lm -lz # link you code with Mini
 
 # this for execution
 $(NAME): $(OBJ) 
-	$(CC) $(OBJ) $(LDFLAGS) $(CFLAGS)  -o $(NAME) # compile the object
+	$(CC) $(OBJ) $(LDFLAGS) $(CFLAGS) -pthread  -o $(NAME) # compile the object
 	rm -f $(OBJ) # remove object file after the executable created
 
 
