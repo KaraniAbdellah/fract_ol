@@ -1,5 +1,5 @@
 NAME = main
-SRC = main.c
+SRC = graphic.c
 OBJ = $(SRC:.c=.o) # define object file "main.o"
 
 

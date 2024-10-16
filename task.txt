@@ -1,11 +1,7 @@
-
-
+// create a simple program using pthread --> [Done]
 // create a simple program using miniLibX
-// create a simple program using pthread
 // create a simple program using miniLibX & pthread
 
-
-
-// make a simple fractls
+/** make a simple fractls **/
 
 
