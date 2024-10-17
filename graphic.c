@@ -32,23 +32,32 @@
 
 int main() {
 	
-	void *mlx; // store refrence to the MiniLibX library after you initialize it.
-	mlx = mlx_init();
+	void *mlx;
+	mlx = mlx_int();
 	if (!mlx) {
-		printf("problem in mlx library"); return 1;
+		printf("can not found MiniLibX\n");
+		return 0;
 	}
 	
-	void *win;
-	win = mlx_new_window(mlx, 1370, 800, "Hello Window");
-	if (!win) {
-		printf("window error creating"); return 1;
-	}
-	// keep the window open
-	mlx_loop(mlx);
+	
+	 
 	
 	
+	return 0;
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
