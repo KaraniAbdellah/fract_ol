@@ -1,5 +1,5 @@
 NAME = main
-SRC = graphic.c
+SRC = julia.c
 OBJ = $(SRC:.c=.o) # define object file "main.o"
 
 
