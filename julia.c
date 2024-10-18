@@ -4,11 +4,14 @@
 
 
 
-
 void *julia_fractl(void *mlx, void *win_ptr, void *image, int *data, int size_line, int bpp, int endian) {
 
-	
-	data[100] = 0x00FF00;
+	int count = 0;
+	for (int i = 0; i < 500; i++) {
+		for (int j = 0; j < 300; j++) {
+			data[j * (size_line / 4) + i] = 0x00FF00; count++;
+		}
+	}
 	
 	return NULL;
 }
@@ -25,15 +28,15 @@ int main() {
 	}
 	
 	// create new window
-	void *ptr_win = mlx_new_window(mlx, 1360, 750, "julia fract_ol");
+	void *ptr_win = mlx_new_window(mlx, 500, 300, "julia fract_ol");
 	if (!ptr_win) {
 		printf("can not create this windows\n");
 		exit(1);
 	}
 	
 	// create image in memory
-	void *image = mlx_new_image(mlx, 1360, 750);
-	if (!mlx_new_image) {
+	void *image = mlx_new_image(mlx, 500, 300); // for my screen is 1360 * 750
+	if (!image) {
 		printf("can not create image in memory\n");
 		exit(1);
 	}
