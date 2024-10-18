@@ -58,9 +58,19 @@ Fractals: Mandelbrot(3), Julia(8), Tricorne(2), burningship(1), monsieur(1).
 		
 	Step 3: 
 		program with miniLibX --> graphic.c
-		program with pthread --> thread.c
-		program with miniLibX & pthread
+		"for function try to see the graphic.c file"
 
+///////////////////////////////////////////////////////////////////////////
+
+	Step 4: 
+		program with pthread --> thread.c
+		"for function try to see the thread.c file"
+		
+///////////////////////////////////////////////////////////////////////////
+		
+	Step 5: 
+		program with miniLibX & pthread
+		
 
 
 

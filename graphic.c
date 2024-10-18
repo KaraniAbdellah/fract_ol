@@ -25,22 +25,55 @@
 		x: coordinate x
 		y: coordinate y
 		color: color of pixel
+	
+	NOTE: drawing using mlx_pixel_put() is --> we need other functions
+	
+	void *image = mlx_new_image(mlx, width, height);
+		Creates an empty image in memory where you can draw your fractal
+			image will ne show in screen until you put it into a window.
+		mlx: The pointer from mlx_init().
+		width and height: The size of the image.
+	
+	int *data = (int *)mlx_get_data_addr(image, &bpp, &size_line, &endian);
+		Gives you access to the raw data (pixels) of the image you created
+			You need this to modify individual pixels.
+		image: The image created by mlx_new_image().
+		bpp, size_line, endian: Variables to hold image details (you can ignore them for now).
 
+	mlx_put_image_to_window(mlx, win, image, 0, 0);
+		Displays the image you created and modified in the window.
+		mlx: The pointer from mlx_init().
+		win: The window created by mlx_new_window().
+		image: The image to show.
+		0, 0: Position in the window (top-left corner).
+	
+	// next part practice
 	
 */
+
+
+
 
 
 int main() {
 	
 	void *mlx;
-	mlx = mlx_int();
+	mlx = mlx_init();
 	if (!mlx) {
 		printf("can not found MiniLibX\n");
 		return 0;
 	}
+	void *win_ptr = mlx_new_window(mlx, 1360, 750, "fract_ol");
+	mlx_pixel_put(mlx, win_ptr, 100, 100, 1000);
+	
+	void *image = mlx_new_window(mlx, 1360, 750);
 	
 	
+	mlx_loop(mlx);
 	 
+	
+	
+	
 	
 	
 	return 0;
