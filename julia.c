@@ -27,11 +27,13 @@ void *julia_fractl(void *mlx, void *win_ptr, void *image, int *data, int size_li
 			each pixel present by 4 byte (red, green, blue, alpha)
 	*/
 	printf("size_line = %d\n", size_line);
-	for (int x = 0; x < WIDTH; x++) {
-		for (int y = 0; y < HEIGHT; y++) {
-            
-            data[y * (1360 / 4) + x] = 0x0000FF;
-            
+	for (int x = 0; x < HEIGHT; x++) {
+		for (int y = 0; y < WIDTH; y++) {
+            int index = WIDTH * 100;
+            data[index] = 123;
+            data[index + 1] = 134;
+            data[index + 2] = 230;
+            data[index + 3] = 1;
 		}
 	}	
 	
