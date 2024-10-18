@@ -91,36 +91,6 @@ int main() {
 
 
 
-/*
-// Map pixel position to the complex plane
-            double zx = 1.5 * (x - 1360 / 2) / (0.5 * 1360) + 0;
-            double zy = (y - 750 / 2) / (0.5 * 750) + 0;
-            int i = 0;
-            int maxIterations = 100;
-            
-			// Iterate to determine the color of the pixel
-            while (zx * zx + zy * zy < 4 && i < maxIterations) {
-                double tmp = zx * zx - zy * zy + cRe; // Calculate new zx
-                zy = 2.0 * zx * zy + cIm; // Calculate new zy
-                zx = tmp; // Update zx
-                i++;
-            }
-			
-			// Calculate color based on the number of iterations
-            int color;
-            if (i == maxIterations) {
-                color = 0; // Black for points inside the set
-            } else {
-                color = (i * 255 / maxIterations) << 16; // Color based on iterations
-            }
-*/
-
-
-
-
-
-
-
 
 
 
