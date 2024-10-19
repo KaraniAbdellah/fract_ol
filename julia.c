@@ -3,8 +3,8 @@
 #include <mlx.h>
 
 
-#define WIDTH 1360
-#define HEIGHT 750
+#define WIDTH 360 // 1360
+#define HEIGHT 240 // 750
 
 
 // NOTE: you need to handle each byte of the image to correctly display the pixel colors
@@ -28,6 +28,8 @@ void *julia_fractl(void *mlx, void *win_ptr, void *image, int *data, int size_li
 	printf("size_line = %d\n", size_line);
 	for (int x = 0; x < HEIGHT; x++) {
 		for (int y = 0; y < WIDTH; y++) {
+            
+            int a = ((float)rand() / RAND_MAX) * 4 - 2;
             
 			int index = WIDTH * x + y;
 			int random_number = rand() * 10 + 1;
