@@ -29,39 +29,16 @@ void *julia_fractl(void *mlx, void *win_ptr, void *image, int *data, int size_li
 	for (int x = 0; x < HEIGHT; x++) {
 		for (int y = 0; y < WIDTH; y++) {
             
-			// Map pixel position to the complex plane
-        	double zx = 1.5 * (x - WIDTH / 2) / (0.5 * WIDTH);
-        	double zy = (y - HEIGHT / 2) / (0.5 * HEIGHT);
-            
-			// Define the complex constant
-			float cRe = -0.47, cIm = 0.65;
-            
-			// Julia iteration
-        	int maxIterations = 100;
-        	int iteration = 0;
-			while (zx * zx + zy * zy < 4 && iteration < maxIterations) {
-		        double tmp = zx * zx - zy * zy + cRe;
-		        zy = 2 * zx * zy + cIm;
-		        zx = tmp;
-		        iteration++;
-        	}
-            
-            int index = WIDTH * x + y;
-			// Set color based on iteration
-			if (iteration == maxIterations) {
-				data[index] = 0;
-				data[index + 1] = 0;
-				data[index + 2] = 0;
-				data[index + 3] = 255;
-			} else {
-				int color = (iteration * 255 / maxIterations);
-				data[index] = color;
-				data[index + 1] = 0;
-				data[index + 2] = 0;
-				data[index + 3] = 255;
-			}
+			int index = WIDTH * x + y;
+			int random_number = rand() * 10 + 1;
+			data[index] = random_number;
+			data[index + 1] = random_number;
+			data[index + 2] = random_number;
+			data[index + 3] = random_number;
 
-            
+
+
+
 		}
 	}	
 	
@@ -115,21 +92,6 @@ int main() {
 	return 0;
 	
 }
-
-
-
-
-/*
-    int index = WIDTH * x + y;
-    int random_number = rand() * 10 + 1;
-    data[index] = random_number;
-    data[index + 1] = random_number;
-    data[index + 2] = random_number;
-    data[index + 3] = random_number;
-*/
-
-
-
 
 
 
