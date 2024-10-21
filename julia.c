@@ -3,8 +3,8 @@
 #include <mlx.h>
 
 
-#define WIDTH 1360 // 1360
-#define HEIGHT 750 // 750
+#define WIDTH 650
+#define HEIGHT 600 
 
 
 // NOTE: you need to handle each byte of the image to correctly display the pixel colors
@@ -28,12 +28,11 @@ void *julia_fractl(void *mlx, void *win_ptr, void *image, int *data, int size_li
 		for (int y = 0; y < WIDTH; y++) {
             
 			// Find pixel position on complex plane
-			double zx = 1.5 * (x - WIDTH / 2) / (0.4 * WIDTH);
-			double zy = (y - HEIGHT / 2) / (0.4 * HEIGHT);
+			double zx = 1.5 * (x - WIDTH / 2) / (0.5 * WIDTH) + 0;
+            double zy = (y - HEIGHT / 2) / (0.5 * HEIGHT) + 0;
 
  			// Zn^2 + C (C = cRe + cIm * i)
-        	float cRe = -0.7, cIm = 0.27015;
-            
+        	float cRe = 0.45, cIm = 0.1428;
             
 			// Julia iteration
         	int maxIterations = 100;
@@ -50,10 +49,18 @@ void *julia_fractl(void *mlx, void *win_ptr, void *image, int *data, int size_li
 		        iteration++;
         	}
 
-			if (iteration == maxIterations) {
-				data[x * (size_line / 4) + y] = 0xFFFFFF;
-			} else {
+			/*
+				if (iteration == maxIterations):
+					point is part of julia set
+				else:
+					point outside the julia set
+			*/
+			if (iteration == maxIterations)   {
 				data[x * (size_line / 4) + y] = 0x000000;
+			} else {
+				int green = (iteration * 255 / maxIterations);
+    			int color = green << 8; // shift 8 for green color
+    			data[x * (size_line / 4) + y] = color;
 			}
 
 		}
