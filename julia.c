@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <mlx.h>
-
+#include "mlx_linux/mlx.h"
 
 #define WIDTH 650
 #define HEIGHT 600 
@@ -46,7 +45,7 @@ int main() {
 	int *data = (int *) mlx_get_data_addr(image, &bpp, &size_line, &endian);
 	
 	// draw julia fract
-	julia_fractl(mlx, ptr_win, image, data, size_line, bpp, endian);
+	// julia_fractl(mlx, ptr_win, image, data, size_line, bpp, endian);
 	
 	// add image to window
 	mlx_put_image_to_window(mlx, ptr_win, image, 0, 0);
