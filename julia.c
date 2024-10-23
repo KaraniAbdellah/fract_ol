@@ -6,13 +6,23 @@
 #define HEIGHT 600 
 
 
+/*
+	in julia everything start with here:
+		Zn+1 = (Zn)² + C
+*/
 
-
-
-	// make julia alone
+void julia_fractl(void *mlx, void *ptr_win, void *image, int *data, int size_line, int bpp, int endian) {
 	
+	for (int x = 0; x < HEIGHT; x++) {
+		for (int y = 0; y < WIDTH; y++) {
+			// Define imaginary (Zy) & real (Zx) part of Zn
+			int Zx = ;
+			int Zy = ;
+			
+		}
+	}
 	
-	
+}
 
 
 
@@ -45,7 +55,7 @@ int main() {
 	int *data = (int *) mlx_get_data_addr(image, &bpp, &size_line, &endian);
 	
 	// draw julia fract
-	// julia_fractl(mlx, ptr_win, image, data, size_line, bpp, endian);
+	julia_fractl(mlx, ptr_win, image, data, size_line, bpp, endian);
 	
 	// add image to window
 	mlx_put_image_to_window(mlx, ptr_win, image, 0, 0);
