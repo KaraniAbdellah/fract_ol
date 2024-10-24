@@ -10,7 +10,6 @@
 
 
 ## Ressources
-- Read about fractals:
   - [Fractal Wikipedia](https://en.wikipedia.org/wiki/Fractal)
   - [Mandelbrot Set Wikipedia](https://en.wikipedia.org/wiki/Mandelbrot_set)
   - [Julia Set Wikipedia](https://en.wikipedia.org/wiki/Julia_set)
