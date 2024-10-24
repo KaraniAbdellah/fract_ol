@@ -22,7 +22,7 @@
 		Info & Installation about miniLibX:
 			MiniLibX: is a simple graphics library for creating basic graphics without
 			needing to know about X-Window or Cocoa	. It helps you make windows, 
-			draw shapes, handle images, and manage events easily.	
+			draw shapes, handle images, and manage events easily.
 		
 			X-Window: is a system that helps display graphics on Unix computers.
 			It allows you to run programs that show images and windows.
