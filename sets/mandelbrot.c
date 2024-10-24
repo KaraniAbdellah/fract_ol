@@ -39,8 +39,8 @@ void mandelbrot_fractl(int *data, int size_line) {
 			if (iteration == maxIteration) {
 				data[x * (size_line / 4) + y] = 0x000000; // Black for points in the set
 			} else {
-				int color = (iteration * 255 / maxIteration);
-				data[x * (size_line / 4) + y] = (color << 16) | (color << 8); // Color gradient
+    			int color = (iteration * 255 / maxIteration);
+    			data[x * (size_line / 4) + y] = (color << 16); // Red gradient
 			}
 			
 		}

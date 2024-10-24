@@ -41,7 +41,7 @@ void burning_ship_fractl(int *data, int size_line) {
 				data[x * (size_line / 4) + y] = 0x000000; // Black for points in the set
 			} else {
 				int color = (iteration * 255 / maxIteration);
-				data[x * (size_line / 4) + y] = (color << 16) | (color << 8); // Color gradient
+				data[x * (size_line / 4) + y] = color; // Blue gradient
 			}
 			
 		}

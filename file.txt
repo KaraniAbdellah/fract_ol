@@ -1,7 +1,3 @@
-// Main Info
-Libraries: miniLibX, pthread, math.
-Fractals: Mandelbrot(3), Julia(8), Tricorne(2), burningship(1), monsieur(1). 
-
 
 // Roadmap
 	Step 1: Introduction
