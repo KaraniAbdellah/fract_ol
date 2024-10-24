@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "mlx.h"
+#include <math.h>
 
 
 
@@ -32,7 +33,7 @@ void mandelbrot(int *data, int size_line) {
 			
 			while (zx * zx + zy * zy < 4 && iteration < maxIteration) {
 				double temp = zx * zx - zy * zy + cRe;
-				zy = 2 * zx * zy + cIm;
+				zy = fabs(2 * zx * zy) + cIm;
 				zx = temp;
 				iteration++;
 			}

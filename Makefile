@@ -1,5 +1,5 @@
 NAME = main
-SRC = mandelbrot.c
+SRC = main.c sets/julia.c sets/mandelbrot.c sets/burning_ship.c
 OBJ = $(SRC:.c=.o)
 
 CC = gcc

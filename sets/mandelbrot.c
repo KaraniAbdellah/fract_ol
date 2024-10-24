@@ -1,19 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 #include "mlx.h"
+#include "set.h"
 
-
-
-#define WIDTH 900
-#define HEIGHT 900
 
 /*
-	For Mandbrot set:
+	in Mandbrot set start with here:
 		Zn+1 = Zn² + C
 */
 
 // Drawing Mandbrot Set
-void mandelbrot(int *data, int size_line) {
+void mandelbrot_fractl(int *data, int size_line) {
 	
 	for (int x = 0; x < HEIGHT; x++) {
 		for (int y = 0; y < WIDTH; y++) {
@@ -50,49 +48,6 @@ void mandelbrot(int *data, int size_line) {
 	
 }
 
-
-
-int main() {
-	
-	// Pointe to minilibx Library
-	void *mlx = mlx_init();
-	if (!mlx) {
-		printf("can not found the minilibx\n");
-		exit(1);
-	}
-	
-	// Create new Window
-	void *ptr_win = mlx_new_window(mlx, WIDTH, HEIGHT, "Mandbrot");
-	if (!ptr_win) {
-		printf("can not create a window\n");
-		exit(1);
-	}
-	
-	// Create new image in memory
-	void *new_image = mlx_new_image(mlx, WIDTH, HEIGHT);
-	if (!new_image) {
-		printf("can not create new image in memory\n");
-		exit(1);
-	}
-	
-	// Access to image pixel's
-	int bpp, size_line, endian;
-	int *data = (int *) mlx_get_data_addr(new_image, &bpp, &size_line, &endian);
-	
-	// Draw Mandlbrot image
-	mandelbrot(data, size_line);
-	
-	// Add image to window
-	mlx_put_image_to_window(mlx, ptr_win, new_image, 0, 0);
-	
-	// Keep window opening
-	mlx_loop(mlx);
-	
-	
-	
-	
-	return 0;
-}
 
 
 
