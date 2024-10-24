@@ -1,30 +1,21 @@
 NAME = main
 SRC = julia.c
-OBJ = $(SRC:.c=.o) # define object file "main.o"
-
+OBJ = $(SRC:.c=.o)
 
 CC = gcc
-CFLAGS = -Imlx_linux -I/usr/include # include function for drawing from miniLibX
-LDFLAGS = -Lmlx_linux -lmlx_Linux -lXext -lX11 -lm -lz # link you code with MiniLibX and X11 libraries
+CFLAGS = -I./minilibx-linux -I/usr/include # Include directories for headers
+LDFLAGS = -L./minilibx-linux -lmlx_Linux -lXext -lX11 -lm -lz # Libraries to link
 
 
-# this for execution
 $(NAME): $(OBJ) 
-	$(CC) $(OBJ) $(LDFLAGS) $(CFLAGS) -pthread  -o $(NAME) # compile the object
-	rm -f $(OBJ) # remove object file after the executable created
+	$(CC) $(OBJ) $(LDFLAGS) $(CFLAGS) -pthread -o $(NAME) # Compile and link
+	rm -f $(OBJ) # Remove object files after building
 
-
-# remove object file by running "make clean"
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJ) # Remove object files
 
-
-# remove object files and the final executable by "make fclean"
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(NAME) # Remove the executable
 
-
-# rebuild the project from scratch by "make re"
-re: fclean $(NAME)
-
+re: fclean $(NAME) # Target to rebuild everything from scratch
 
