@@ -51,27 +51,6 @@ void julia_fractl(int *data, int size_line) {
 	}
 }
 
-int mouse_scroll(int button, int x, int y, void *param) {
-    if (button == 4) { // Scroll up
-        zoom_level *= 1.1; // Zoom in
-        center_x += (x - WIDTH / 2) * (1 - 1 / zoom_level);
-        center_y += (y - HEIGHT / 2) * (1 - 1 / zoom_level);
-    } else if (button == 5) { // Scroll down
-        zoom_level /= 1.1; // Zoom out
-        center_x += (x - WIDTH / 2) * (1 - 1 / zoom_level);
-        center_y += (y - HEIGHT / 2) * (1 - 1 / zoom_level);
-    }
-
-    // Redraw the fractal
-    void *image = mlx_new_image(param, WIDTH, HEIGHT);
-    int bpp, size_line, endian;
-    int *data = (int *)mlx_get_data_addr(image, &bpp, &size_line, &endian);
-    julia_fractl(data, size_line);
-    mlx_put_image_to_window(param, (void *)param, image, 0, 0);
-    mlx_destroy_image(param, image);
-
-    return 0;
-}
 
 
 int main() {
@@ -105,9 +84,6 @@ int main() {
 	// draw julia fract
 	julia_fractl(data, size_line);
 	
-    // Hook mouse scroll function
-    mlx_mouse_hook(ptr_win, mouse_scroll, mlx);
-	
 	// add image to window
 	mlx_put_image_to_window(mlx, ptr_win, image, 0, 0);
 	
@@ -120,20 +96,6 @@ int main() {
 	return 0;
 	
 }
-
-
-
-
-
-
-// Add Zoom Variables
-/*
-// Define imaginary (Zy) & real (Zx) part of Zn
-double zx = 1.5 * (x - WIDTH / 2) / (0.5 * WIDTH);
-double zy = (y - HEIGHT / 2) / (0.5 * HEIGHT);
-*/
-
-
 
 
 
