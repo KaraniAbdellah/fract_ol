@@ -16,7 +16,7 @@
   - [Julia Set Wikipedia](https://en.wikipedia.org/wiki/Julia_set)
   - [Burning Ship Fractal Wikipedia](https://en.wikipedia.org/wiki/Burning_Ship_fractal)
 
-## Setup Enverement
+## Setup Environment
 - Install miniLibX, pthread, and math libraries.
 - Read about libraries:
   - **MiniLibX**: A simple graphics library for creating basic graphics without needing to know about X-Window or Cocoa. It helps you make windows, draw shapes, handle images, and manage events easily.
