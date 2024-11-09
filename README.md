@@ -32,7 +32,6 @@
     cd mlx_linux
     make
     ./configure
-    make
     ```
   - Create a Makefile in your main project to compile the source code.
 
