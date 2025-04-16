@@ -1,3 +1,6 @@
+#### youtube video: https://youtu.be/O5OwJBbEdyY?si=n2LqrRvUT8oYr94r
+
+
 ## Julia Set
 ![Fractal Example](images/julia.png)
 
